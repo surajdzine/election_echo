@@ -1,0 +1,7 @@
+/* style.css */
+
+/* Custom utility for the Hero text gradient, used in the React code */
+.bg-clip-text {
+    -webkit-background-clip: text;
+    background-clip: text;
+}

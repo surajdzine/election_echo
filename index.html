@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Election Echo - AI Accountability Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+
+    <div id="app">
+        <nav class="bg-white/80 backdrop-blur-md border-b border-gray-200 sticky top-0 z-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                            <i data-lucide="trending-up" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <div>
+                            <h1 class="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                                Election Echo
+                            </h1>
+                            <p class="text-xs text-gray-600">AI Accountability Tracker</p>
+                        </div>
+                    </div>
+
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="#home" class="text-gray-700 hover:text-blue-600 transition">Home</a>
+                        <a href="#tracker" class="text-gray-700 hover:text-blue-600 transition">Tracker</a>
+                        <a href="#about" class="text-gray-700 hover:text-blue-600 transition">About</a>
+                        <a href="#contact" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
+                        <button class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition">
+                            Get WhatsApp Updates
+                        </button>
+                    </div>
+
+                    <button class="md:hidden" id="mobile-menu-button">
+                        <i data-lucide="menu" class="w-6 h-6 menu-icon"></i>
+                        <i data-lucide="x" class="w-6 h-6 close-icon hidden"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="md:hidden bg-white border-t border-gray-200 hidden" id="mobile-menu">
+                <div class="px-4 py-4 space-y-3">
+                    <a href="#home" class="block text-gray-700 hover:text-blue-600">Home</a>
+                    <a href="#tracker" class="block text-gray-700 hover:text-blue-600">Tracker</a>
+                    <a href="#about" class="block text-gray-700 hover:text-blue-600">About</a>
+                    <a href="#contact" class="block text-gray-700 hover:text-blue-600">Contact</a>
+                    <button class="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg">
+                        Get WhatsApp Updates
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <section id="home" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="inline-block bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                        🚀 Powered by AI Agents
+                    </div>
+                    <h2 class="text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                        Democracy Deserves
+                        <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Memory</span>
+                    </h2>
+                    <p class="text-xl text-gray-600 mb-8">
+                        Track 1,200+ political promises in real-time. AI-powered fact-checks delivered to your WhatsApp.
+                        No more empty words—just accountability.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-xl transition flex items-center justify-center">
+                            Start Tracking <i data-lucide="chevron-right" class="w-5 h-5 ml-2"></i>
+                        </button>
+                        <button class="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-blue-600 hover:text-blue-600 transition">
+                            Watch Demo
+                        </button>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="bg-white rounded-2xl shadow-2xl p-8 border border-gray-200">
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center">
+                                    <i data-lucide="bell" class="w-6 h-6 text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-900">WhatsApp Alert</p>
+                                    <p class="text-sm text-gray-500">Just now</p>
+                                </div>
+                            </div>
+                            <i data-lucide="check-circle" class="w-6 h-6 text-green-500"></i>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg p-4 mb-4">
+                            <p class="text-sm text-gray-700 mb-2">
+                                <strong>Promise Update:</strong> UP Govt tablet distribution
+                            </p>
+                            <div class="w-full bg-gray-200 rounded-full h-3 mb-2">
+                                <div class="bg-green-500 h-3 rounded-full" style="width: 100%;"></div>
+                            </div>
+                            <p class="text-xs text-gray-600">
+                                ✅ 11.2 lakh tablets distributed (Target: 10 lakh)
+                            </p>
+                        </div>
+                        <p class="text-sm text-gray-500 italic">
+                            "Finally, a tool that holds them accountable!" - Citizen feedback
+                        </p>
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 w-40 h-40 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full blur-3xl opacity-30"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6" id="stats-container">
+                </div>
+        </section>
+
+        <section id="tracker" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-bold text-gray-900 mb-4">Live Promise Tracker</h3>
+                <p class="text-xl text-gray-600">Real-time updates from 5 states across India</p>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg p-6 mb-8 border border-gray-200">
+                <div class="flex flex-col md:flex-row gap-4">
+                    <div class="flex-1 relative">
+                        <i data-lucide="search" class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"></i>
+                        <input
+                            type="text"
+                            placeholder="Search promises, politicians, or states..."
+                            class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                            id="search-input"
+                        />
+                    </div>
+                    <div class="flex gap-2 overflow-x-auto" id="tabs-container">
+                        </div>
+                </div>
+            </div>
+
+            <div class="grid gap-6" id="promises-list">
+                </div>
+        </section>
+
+        <section class="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h3 class="text-4xl font-bold text-white text-center mb-16">How It Works</h3>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white/10 backdrop-blur-md rounded-xl p-8 text-white hover:bg-white/20 transition">
+                        <div class="text-5xl font-bold mb-4 opacity-50">01</div>
+                        <h4 class="text-2xl font-bold mb-3">AI Scrapes Data</h4>
+                        <p class="text-white/80">Autonomous agents monitor manifestos, speeches, and government portals 24/7</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md rounded-xl p-8 text-white hover:bg-white/20 transition">
+                        <div class="text-5xl font-bold mb-4 opacity-50">02</div>
+                        <h4 class="text-2xl font-bold mb-3">Fact-Check & Verify</h4>
+                        <p class="text-white/80">NLP engines cross-reference promises with official records and news sources</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md rounded-xl p-8 text-white hover:bg-white/20 transition">
+                        <div class="text-5xl font-bold mb-4 opacity-50">03</div>
+                        <h4 class="text-2xl font-bold mb-3">WhatsApp Alerts</h4>
+                        <p class="text-white/80">Get personalized updates on promises that matter to you in your language</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-12 text-center border border-gray-200">
+                <h3 class="text-4xl font-bold text-gray-900 mb-4">Join 87,000+ Informed Citizens</h3>
+                <p class="text-xl text-gray-600 mb-8">Get promise updates on WhatsApp. Free forever.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+                    <input
+                        type="tel"
+                        placeholder="Enter WhatsApp number"
+                        class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    />
+                    <button class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition whitespace-nowrap">
+                        Subscribe
+                    </button>
+                </div>
+                <p class="text-sm text-gray-500 mt-4">Available in Hindi, Tamil, Bengali, Marathi & more</p>
+            </div>
+        </section>
+
+        <footer class="bg-gray-900 text-white py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-4 gap-8 mb-8">
+                    <div>
+                        <div class="flex items-center space-x-3 mb-4">
+                            <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                                <i data-lucide="trending-up" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <h4 class="text-xl font-bold">Election Echo</h4>
+                        </div>
+                        <p class="text-gray-400 text-sm">Empowering democracy through AI-powered accountability</p>
+                    </div>
+                    <div>
+                        <h5 class="font-semibold mb-4">Product</h5>
+                        <ul class="space-y-2 text-gray-400 text-sm">
+                            <li><a href="#" class="hover:text-white">Features</a></li>
+                            <li><a href="#" class="hover:text-white">Pricing</a></li>
+                            <li><a href="#" class="hover:text-white">API</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="font-semibold mb-4">Company</h5>
+                        <ul class="space-y-2 text-gray-400 text-sm">
+                            <li><a href="#" class="hover:text-white">About</a></li>
+                            <li><a href="#" class="hover:text-white">Careers</a></li>
+                            <li><a href="#" class="hover:text-white">Press</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="font-semibold mb-4">Legal</h5>
+                        <ul class="space-y-2 text-gray-400 text-sm">
+                            <li><a href="#" class="hover:text-white">Privacy</a></li>
+                            <li><a href="#" class="hover:text-white">Terms</a></li>
+                            <li><a href="#" class="hover:text-white">Methodology</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
+                    <p>© 2024 Election Echo. Built with ❤️ for Indian democracy.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+      // Initialize Lucide icons after script.js runs
+      lucide.createIcons();
+    </script>
+</body>
+</html>
